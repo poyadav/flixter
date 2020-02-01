@@ -57,10 +57,12 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             let title = movie["title"] as! String
             let synopsis = movie["overview"] as! String
             let rating = movie["vote_average"] as! Double
+            let date = movie["release_date"] as! String
         
             cell.titleLabel.text = title
             cell.synopsisLabel.text = synopsis
             cell.ratingLabel.text = "Rating: " + String(rating)
+            cell.dateLabel.text = "Released: " + date
         
         
             let baseUrl = "https://image.tmdb.org/t/p/w185"
